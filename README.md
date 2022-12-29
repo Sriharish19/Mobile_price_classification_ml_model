@@ -65,3 +65,23 @@ The distribution of categorical features across different price ranges stays the
 The distribution of the numerical features across different price ranges shows us that only the features RAM, battery power, px_height and px_width increase with an increase in price. These features are the most influential in determining the price ranges.
 
 RAM has the strongest correlation with the target variable followed by battery power, px_height and px_width. Rest of the numerical features have a very low correlation with the target variable.
+
+# Modeling:
+
+We have used several classification models to predict the mobile price range and compare their performances.
+
+|Models	|Accuracy|	Precision	|Recall	|ROC-AUC|
+|---|---|---|---|---|
+|Logistic Regression	|96.43%|	96.45%|	96.43%|	99.75%|
+|SVM	|96.15%	|96.16%	|96.15%|	99.87%|
+|KNN	|91.76%	|91.76%	|91.76%|	97.75%|
+|XGBoost	|90.66%|	90.75%	|90.66%|	99.09%|
+|Random Forest	|89.56%	|89.58%|	89.56%|	98.88%|
+|Gradient Boosting	|89.28%	|89.24%|	89.28%	|98.79%|
+
+
+All the algorithms have provided us with a good result for predicting the mobile price range. As our target classes are balanced, we can consider accuracy as an important metric to measure and compare our models. The accuracy achieved by most of the models is above 90% which proves that the models have classified the data well.
+
+Logistic Regression along with SVM has performed the best out of all the models as they have achieved an accuracy of 96% and also scored well in precision, recall and roc auc. The tree based methods have performed poorly in comparison to the other classification models implemented.
+
+
